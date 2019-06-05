@@ -1,0 +1,31 @@
+html {
+  font-size: 12px;
+}
+
+body {
+  background: $black;
+  color: $white;
+  font-family: $font-secondary;
+  height: 100vh;
+  @media screen and (max-width: 480px) {
+    background: $grad-dragon;
+    overflow: hidden;
+  }
+}
+
+.container {
+  max-width: 768px;
+  margin: 0 auto;
+}
+
+.weather {
+  border-radius: 4px;
+  padding: 0.6rem 1.6rem;
+  background: $grad-dragon;
+  margin-top: 2rem;
+  height: 635px;
+  position: relative;
+  @media screen and (max-width: 480px) {
+    background: transparent;
+  }
+}

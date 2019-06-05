@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="shortcut icon" href="#" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.9/css/weather-icons.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="<%= htmlWebpackPlugin.files.chunks.main.css %>">
+  <title>Weather App</title>
+</head>
+
+<body>
+  <div class="app">
+    <div class="container">
+      <div class="weather">
+        <div class="spinner-wrapper">
+          <div class="spinner">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+          </div>
+        </div>
+        <div class="search">
+          <p class="search__city">
+            <!-- dummy data-->Chicago, IL</p>
+          <form class="search__form">
+            <input type="text" class="search__input" placeholder="enter a city...">
+            <button class="search__trigger">
+              <i class="fa fa-search"></i>
+            </button>
+          </form>
+        </div>
+        <div class="current">
+          <div class="current__left">
+            <div class="current__icon"></div>
+            <div class="current__summary">
+              <!-- dummy data -->
+              Partly Cloudy
+            </div>
+          </div>
+          <div class="current__right">
+            <div class="current__temp">
+              <p class="current__temp-num">44&#176;</p>
+              <!-- <p class="current__range">
+                <span class="current__high">81&#176;</span>
+                <span class="fa fa-minus divider">_</span>
+                <span class="current__low">69&#176;</span>
+              </p> -->
+            </div>
+            <div class="current__others">
+              <div class="current__wind">
+                <img src="<%= require('./images/wind.svg') %>" class="current__icon" width=30 height=30></img>
+                <p><span>12</span>mph</p>
+              </div>
+              <div class="current__humidity">
+                <!-- <img src="./images/humidity.svg" class="current__icon" width=30 height=30></img> -->
+                <img src="<%= require('./images/humidity.svg') %>" class="current__icon" width=30 height=30></img>
+                <p><span>30</span>%</p>
+              </div>
+              <div class="current__precipitation">
+                <!-- <img src="./images/precipitation.svg" class="current__icon" width=30 height=30></img> -->
+                <img src="<%= require('./images/precipitation.svg') %>" class="current__icon" width=30 height=30></img>
+                <p><span>78</span>%</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="wlist">
+        </div>
+        <div class="units">
+          <button class="units__fahrenheit units__fahrenheit--active">&#176;F</button>
+          <!-- <span class="units__divider">|</span> -->
+          <button class="units__celcius">&#176;C</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="<%= htmlWebpackPlugin.files.chunks.main.entry %>"></script>
+</body>
+
+</html>

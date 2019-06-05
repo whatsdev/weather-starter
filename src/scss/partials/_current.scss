@@ -1,0 +1,55 @@
+.current {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  padding: 4rem 8rem;
+  @media screen and (max-width: 480px){
+    padding: 1rem 7rem;
+    display: block;
+  }
+  @media screen and (max-width: 768px){
+    padding: 1rem 4rem;
+  }
+}
+.current__left {
+  flex: 1;
+  align-items: center;
+  justify-content: space-around;
+  display: flex;
+  flex-direction: column;
+}
+.current__summary {
+  font-size: 2rem;
+  color: $white;
+  font-weight: bold;
+  font-family: $font-main;
+}
+.current__right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.current__temp {
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+}
+.current__temp-num {
+  font-size: 6rem;
+  line-height: 0;
+}
+.current__range {
+  margin-left: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.current__others {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  span {
+    font-size: 1.4rem;
+  }
+}

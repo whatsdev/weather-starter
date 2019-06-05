@@ -1,0 +1,51 @@
+.search {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+.search__city {
+  color: $white;
+  font-family: $font-main;
+  font-weight: bold;
+  letter-spacing: 1.2px;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+}
+.search__form {
+  display: block;
+  margin: auto 0;
+  position: relative;
+}
+.search__input {
+  width: 0;
+  height: 1.5rem;
+  opacity: 0;
+  transition: 0.3s all ease;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 1rem;
+  font-size: 1.2rem;
+  outline: 0;
+  border: 0;
+  border-radius: 1.8rem;
+}
+.search__input--open {
+  width: 12.5rem;
+  opacity: 1;
+}
+.search__trigger {
+  height: 3.5rem;
+  width: 3.5rem;
+  position: relative;
+  background: $yellow;
+  padding: 1rem;
+  font-size: 1.2rem;
+  border: 0;
+  border-radius: 50%;
+  outline: 0;
+  color: $white;
+}
+.search__trigger:hover {
+  cursor: pointer;
+}
